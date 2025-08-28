@@ -1,7 +1,7 @@
 [Unit]
 Description=Check BBB phy on boot and repower if PHY failed
 After=local-fs.target
-Before=network-online.target
+Before=network-pre.target
 Requires=
 Wants=local-fs.target
 
@@ -15,4 +15,4 @@ TimeoutSec=0
 StandardOutput=journal+console
 
 [Install]
-WantedBy=network-online.target
+WantedBy=multi-user.target
