@@ -1,7 +1,7 @@
 [Unit]
 Description=Check BBB phy on boot and repower if PHY failed
-After=local-fs.target
-Before=network-pre.target
+After=network.target
+Before=
 Requires=
 Wants=local-fs.target
 
